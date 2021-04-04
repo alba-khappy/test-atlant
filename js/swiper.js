@@ -1,21 +1,26 @@
-const swiper = new Swiper('.swiper-1', {
+const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 3,
-  slidesPerColumn: 2,
+  slidesPerView: 1,
+  slidesPerColumn: 1,
   spaceBetween: 30,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination-1',
-    type: 'fraction',
+    el: '.swiper-pagination',
+    clickable: 'true',
+    renderBullet: function (index, className) {
+      return '<span className="fff ' + className + '">' + index + '</span>';
+    }
   },
+
+
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next-1',
-    prevEl: '.swiper-button-prev-1',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 
   // And if we need scrollbar
