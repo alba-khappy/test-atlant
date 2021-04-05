@@ -6,12 +6,14 @@ const swiper = new Swiper('.swiper-container', {
   slidesPerColumn: 1,
   spaceBetween: 30,
 
+
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: 'true',
     renderBullet: function (index, className) {
-      return '<span className="fff ' + className + '">' + index + '</span>';
+      let arr = new Array ("правовой консталтинг", "оспаривание кадастровой стоимости", "оценка", "юридические услуги", "аудит");
+      return `<div class="swiper-div-wrapper"> <div class="swiper-text">${arr[index]}</div> <div class="swiper-pagination-bullet"></div> </div>`;
     }
   },
 
